@@ -53,7 +53,7 @@ def webhook():
 
             classification_res = classification_pipeline(audio_file)
 
-            hasil = f"Lang : {detected_language} \nText : {transcribed_text}\nClasification : {classification_res[0]['label']}"
+            hasil = f"Lang : {detected_language} \nText : {transcribed_text}\nClasification : {classification_res[0]['label']} ({classification_res[0]['score']})"
 
             # print("Original Text:", transcribed_text)
             # print("Detected Language:", detected_language)
