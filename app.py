@@ -42,7 +42,7 @@ def webhook():
 
         filename = parsed_url.split('/')[-1]
 
-        if filename.endswith(('.wav', '.mp3')):
+        if filename.endswith(('.wav', '.mp3', '.oga')):
             audio_url = "http://103.149.203.216:9000/inspira/NLP-C/" + filename
             audio_file = download_audio(audio_url)
 
