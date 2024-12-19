@@ -43,7 +43,7 @@ def webhook():
         filename = parsed_url.split('/')[-1]
 
         if filename.endswith(('.wav', '.mp3', '.oga')):
-            audio_url = "http://103.149.203.216:9000/inspira/NLP-C/" + filename
+            audio_url = "http://xxx/inspira/NLP-C/" + filename
             audio_file = download_audio(audio_url)
 
             # Transcribe and detect language
@@ -61,11 +61,11 @@ def webhook():
             from_number = data['payload'].get('from', None)
 
             response = requests.post(
-                'https://whatsapp.inspektorat.pekalongankab.go.id/api/sendText',
+                'https://xxx/api/sendText',
                 headers={
                     'Content-Type': 'application/json; charset=utf-8',
                     'Accept': 'application/json',
-                    'X-Api-Key': 'KMZWAY87AA'
+                    'X-Api-Key': 'xxx'
                 },
                 json={  # Menggunakan parameter `json` untuk mengirim raw JSON
                     'chatId': from_number,
@@ -81,11 +81,11 @@ def webhook():
             from_number = data['payload'].get('from', None)
 
             response = requests.post(
-                'https://whatsapp.inspektorat.pekalongankab.go.id/api/sendText',
+                'https://xxx/api/sendText',
                 headers={
                     'Content-Type': 'application/json; charset=utf-8',
                     'Accept': 'application/json',
-                    'X-Api-Key': 'KMZWAY87AA'
+                    'X-Api-Key': 'xxx'
                 },
                 json={  # Menggunakan parameter `json` untuk mengirim raw JSON
                     'chatId': from_number,
@@ -106,11 +106,11 @@ def webhook():
         from_number = data['payload'].get('from', None)
 
         response = requests.post(
-            'https://whatsapp.inspektorat.pekalongankab.go.id/api/sendText',
+            'https://xxx/api/sendText',
             headers={
                 'Content-Type': 'application/json; charset=utf-8',
                 'Accept': 'application/json',
-                'X-Api-Key': 'KMZWAY87AA'
+                'X-Api-Key': 'xxx'
             },
             json={  # Menggunakan parameter `json` untuk mengirim raw JSON
                 'chatId': from_number,
